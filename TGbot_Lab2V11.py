@@ -110,26 +110,3 @@ def tgbot():
         bot.send_message(chat_id=message.chat.id, text=f'You will save for yourself ' + str(gf))
 
     bot.infinity_polling(skip_pending=True)
-
-'''
-import logging
-import time
-from aiogram import Bot, Dispatcher, types
-from dotenv import load_dotenv
-import os
-load_dotenv()
-
-def Bot():
-    bot = TeleBot(os.getenv("TOKEN"))
-    dp = Dispatcher(bot)  # Диспетчер
-
-@dp.message_handler(commands=['start', 'help'])
-async def process_start_command(message: types.Message):
-    await message.reply("Тут ваш текст")
-
-@dp.message_handler(commands=['command'])
-async def process_start_command(message: types.Message):
-    await message.reply("Тут еще что-то")
-'''
-#t='abcdefghijklmnopqrstuvwxyz'
-#print(t[1:11] + '2' + t[11:-2])
