@@ -115,10 +115,12 @@ def tgbot():
 import logging
 import time
 from aiogram import Bot, Dispatcher, types
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 def Bot():
-    bot = Bot(token="7148468736:AAGjwGoJAfKZdBO_SpqX5koycYldnZL7qdc")  # Объект бота
+    bot = TeleBot(os.getenv("TOKEN"))
     dp = Dispatcher(bot)  # Диспетчер
 
 @dp.message_handler(commands=['start', 'help'])
